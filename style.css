@@ -9,3 +9,7 @@
     border-style: solid;
     border-width: 1px;
 }
+
+.grid-item:hover {
+    background-color: red;
+}
