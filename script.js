@@ -17,3 +17,18 @@ function generateGrid() {
 }
 
 generateGrid();
+
+function highlightGridItems(){
+  const gridItems = document.getElementsByClassName('grid-item');
+  console.log(gridItems.length)
+  for(let i = 0; i < gridItems.length; i++){
+    gridItems[i].onmouseenter = () => {
+      gridItems[i].style.backgroundColor = "red";
+    }
+    gridItems[i].onmouseleave = () => {
+      gridItems[i].style.backgroundColor = "grey";
+    }
+  }
+}
+
+highlightGridItems();
