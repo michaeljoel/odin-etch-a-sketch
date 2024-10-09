@@ -34,10 +34,9 @@ function highlightGridItems() {
 highlightGridItems();
 
 function newGrid() {
-  const rows = prompt("How many rows?");
-  const cols = prompt("How many columns?");
+  const sidesPerSquare = prompt("How many sides per square?");
 
-  if (rows > 100 || cols > 100) {
+  if (sidesPerSquare > 100) {
     alert("Can be no greater than 100.");
     return;
   }
@@ -48,6 +47,6 @@ function newGrid() {
   newGridContainer.classList.add("grid-container");
   document.body.append(newGridContainer);
 
-  generateGrid(rows, cols);
+  generateGrid(sidesPerSquare, sidesPerSquare);
   highlightGridItems();
 }
